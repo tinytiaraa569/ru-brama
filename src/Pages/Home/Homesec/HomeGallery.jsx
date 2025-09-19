@@ -382,15 +382,21 @@ const galleryImages = [
     category: "Earrings",
   },
   {
-    src: "https://images.pexels.com/photos/3023668/pexels-photo-3023668.jpeg",
+    src: "https://images.pexels.com/photos/3640960/pexels-photo-3640960.jpeg",
     alt: "Gold chain bracelet",
     title: "Gold Chain",
     category: "Bracelets",
   },
   {
-    src: "https://images.pexels.com/photos/3640960/pexels-photo-3640960.jpeg",
+    src: "https://images.pexels.com/photos/3023668/pexels-photo-3023668.jpeg",
     alt: "Minimalist platinum band",
     title: "Platinum Band",
+    category: "Rings",
+  },
+  {
+    src: "https://images.pexels.com/photos/3972217/pexels-photo-3972217.jpeg",
+    alt: "Designer cocktail ring",
+    title: "Cocktail Ring",
     category: "Rings",
   },
   {
