@@ -122,6 +122,7 @@
 
 // export default JewelryManufacturing
 "use client"
+import SEO from "@/Seo/Seo"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
@@ -352,6 +353,13 @@ const JewelryManufacturingVariant3 = () => {
 
   return (
     <>
+    <SEO
+      title="Jewelry Manufacturing & Production Process | Ru-Brama Pvt Ltd"
+      description="Explore Ru-Brama’s jewelry manufacturing and production process: sketch, CAD, CAM, casting, stone setting, polishing, finishing, QC, and packaging. We work with diamonds, lab-grown diamonds, gold, platinum, and silver."
+      keywords="Jewelry Manufacturing, Jewelry Production, Jewelry Manufacturing Process, Jewelry Production Process, Diamond Jewelry Manufacturing, Gold Jewelry Production, Silver Jewelry Manufacturing, Platinum Jewelry Manufacturing, Lab Grown Diamond Jewelry, Colored Stone Jewelry, Jewelry Casting, Jewelry Molding, Jewelry CAD CAM, Jewelry Prototyping, Jewelry 3D Printing, Jewelry Stone Setting, Jewelry Polishing, Jewelry Finishing, Jewelry Quality Control, Jewelry Assembly, Jewelry Packaging, Custom Jewelry Manufacturing, Wholesale Jewelry Production, Private Label Jewelry Manufacturing, Jewelry Export, Modern Jewelry Factory, Jewelry Production House"
+      canonical="https://ru-brama.vercel.app/jewelry-manufacturing-production"
+    />
+
 
      <div className="relative h-[50vh] sm:h-[65vh] lg:h-[80vh] overflow-hidden">
         <motion.img
