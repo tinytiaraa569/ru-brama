@@ -133,7 +133,7 @@ const Aboutsection1 = () => {
             <Badge variant="secondary" className="mb-2 sm:mb-4 text-sm font-medium">
               Premium Jewelry Production
             </Badge>
-            <h1 className="text-2xl md:text-5xl font-bold mb-2 sm:mb-4 text-balance text-white">
+            <h1 className="text-xl md:text-5xl font-bold mb-2 sm:mb-4 text-balance text-white">
               Craftsmanship You Can Trust
             </h1>
             <p className="text-md md:text-xl text-gray-200 mb-8 text-pretty max-w-3xl mx-auto">

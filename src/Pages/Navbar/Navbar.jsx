@@ -250,7 +250,7 @@ function Navbar() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9, type: "spring" }}
                 >
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="cursor-pointer">
                     Login
                   </Button>
                 </motion.div>
@@ -259,7 +259,7 @@ function Navbar() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.0, type: "spring" }}
                 >
-                  <Button size="sm">Get Demo</Button>
+                  <Button size="sm" className="cursor-pointer">Get Started</Button>
                 </motion.div>
               </div>
 
@@ -349,7 +349,7 @@ function Navbar() {
                     Login
                   </Button>
                   <Button className="w-full" onClick={() => setIsOpen(false)}>
-                    Get Demo
+                    Get Started
                   </Button>
                 </div>
               </div>

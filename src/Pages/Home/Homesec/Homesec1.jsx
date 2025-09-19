@@ -99,7 +99,7 @@ const HomeSec1Variant8 = () => {
   }, [])
 
   return (
-    <div className="relative w-full max-h-[50vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-hidden ">
+    <div className="relative w-full max-h-[52vh] sm:max-h-[70vh] md:max-h-[85vh] overflow-hidden ">
       {/* Video */}
       <div className="relative w-full h-full">
         <video

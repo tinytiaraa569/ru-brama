@@ -10,7 +10,7 @@ const TopBar = () => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-primary text-primary-foreground py-2 text-sm"
+        className="bg-primary text-primary-foreground py-2 text-xs sm:text-sm"
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center space-x-6">

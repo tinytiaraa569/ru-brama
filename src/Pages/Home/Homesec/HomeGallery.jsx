@@ -438,6 +438,7 @@ export default function MasonryGalleryVariant1() {
     window.addEventListener("resize", checkMobile)
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
+  
 
   const displayImages = isMobile ? (showAll ? galleryImages : galleryImages.slice(0, 8)) : galleryImages
 
