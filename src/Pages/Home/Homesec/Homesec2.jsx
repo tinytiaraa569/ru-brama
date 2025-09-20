@@ -457,7 +457,10 @@ export function AnimatedCounter({ value, duration = 2, className = "" }) {
   const suffix = value.replace(/[\d,]/g, "")
   const hasComma = value.includes(",")
 
+  const isNumeric = !isNaN(numericValue) && numericValue > 0
+
   useEffect(() => {
+    if (!isNumeric) return // skip animation for non-numeric values
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -508,8 +511,14 @@ export function AnimatedCounter({ value, duration = 2, className = "" }) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {formatNumber(count)}
-      {suffix}
+     {isNumeric ? (
+        <>
+          {formatNumber(count)}
+          {suffix}
+        </>
+      ) : (
+        value // plain text if not numeric
+      )}
     </motion.div>
   )
 }
@@ -530,15 +539,15 @@ function Homesec2() {
     },
     {
       icon: Award,
-      value: "ISO 9001",
-      label: "Certified Quality",
-      description: "International quality standards",
+      value: "High",
+      label: "High Standards",
+      description: "Committed to uncompromising global quality benchmarks",
     },
     {
       icon: Globe,
-      value: "25+",
-      label: "Countries Served",
-      description: "Global export network and partnerships",
+      value: "100%",
+      label: "Facility",
+      description: "In-house facility ensuring full control of production",
     },
   ]
 

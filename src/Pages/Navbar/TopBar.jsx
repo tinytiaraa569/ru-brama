@@ -32,7 +32,7 @@ const TopBar = () => {
 
           </div>
           <div className="hidden md:block">
-            <span>logos or some tagline?</span>
+            <span>White label your Precious Jewelry</span>
           </div>
         </div>
       </motion.div>

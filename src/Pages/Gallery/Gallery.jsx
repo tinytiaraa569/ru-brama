@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import GallerySection1 from './GallerySection1'
+import GallerySection2 from './GallerySection2'
 
 const Gallery = () => {
    useEffect(() => {
@@ -8,7 +10,11 @@ const Gallery = () => {
         })
       }, [])
   return (
-    <div className='w-full h-[70vh] flex justify-center items-center'>Gallery</div>
+    <>
+    {/* <GallerySection1 /> */}
+    <GallerySection2 />
+
+    </>
   )
 }
 

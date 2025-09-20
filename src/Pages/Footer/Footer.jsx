@@ -165,7 +165,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Follow Us</h4>
             <div className="space-y-3">
               <motion.a
-                href="#"
+                href="https://www.instagram.com/rubrama_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+
                 className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
                 whileHover={{ x: 5, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -175,7 +178,9 @@ const Footer = () => {
               </motion.a>
 
               <motion.a
-                href="#"
+                href="https://www.facebook.com/share/14Gj5Cp2q5N/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
                 whileHover={{ x: 5, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}

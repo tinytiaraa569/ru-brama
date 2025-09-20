@@ -1,0 +1,381 @@
+.laptop-view {
+    display: block;
+  }
+  .counterwraper-mobile {
+    display: none;
+  }
+.counterwraper{
+    height: auto;
+    position: relative;
+}
+
+.eb-wrapper-outer.eb-wrapper-75wa70h {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-top: 120px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 70px;
+    background-image: linear-gradient(90deg, rgba(252, 254, 255, 1) 0%, rgba(234, 248, 255, 1) 100%);
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+.eb-wrapper-outer.eb-wrapper-75wa70h:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url(obj.webp);
+    opacity: 0.5;
+    background-position: top left;
+    background-repeat: no-repeat;
+    transition: background 0.5s, opacity 0.5s, filter 0.5s;
+}
+
+.eb-wrapper-outer.eb-wrapper-75wa70h > .eb-wrapper-inner > .eb-wrapper-inner-blocks {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0 100px;
+}
+.eb-wrapper-align-center {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.eb-row-wrapper >.eb-row-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: none !important;
+    position: relative;
+    width: auto !important;
+    height: auto;
+}
+.eb-parent-eb-column-ezqpu3j {
+    width: 50%;
+    height: auto;
+    order: unset;
+    transition: all .5s, background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+.eb-parent-eb-column-zrlittl {
+    width: 50%;
+    height: auto;
+
+    order: unset;
+    transition: all .5s, background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+.wp-block-essential-blocks-wrapper{
+    position: relative;
+}
+
+   .circle-wrapper {
+    position: relative;  /* Relative parent to position child circles */
+    width: 420px;  /* Fixed size to maintain perfect circle proportions */
+    height: 420px;  
+}
+
+.blue-circle {
+    /* opacity: 0%; */
+    width: 100%;  /* Full width inside parent */
+    height: 100%;  /* Matches the height to keep it a perfect circle */
+    background-color: #d5f6ff;  /* Light blue color */
+    border-radius: 50%;  /* Perfect circle */
+    border: 3px solid #cdf3f4;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.small-circle {
+    position: absolute;  /* To position relative to .circle-wrapper */
+    width: 40px;  
+    height: 40px;  
+    background-color: white;  
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;
+    border-radius: 50%;  /* Make it circular */
+}
+
+/* Positions for top, bottom, left, and right divs */
+.top {
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;  
+    height: 140px;  
+    overflow: hidden;
+    /* padding: 53px 45px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: rgba(19, 40, 88, 0.12) 0px 30px 50px 0px;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+    
+}
+.adjustsndm {
+    display: flex;
+    flex-direction: column;  /* Stack h1 and p vertically */
+    justify-content: center;  /* Center items vertically */
+    align-items: center;  /* Center items horizontally */
+    text-align: center;  /* Center-align text */
+}
+
+.adjustsndm h1 {
+    font-size: 24px;  /* Slightly larger font */
+    font-weight: 600;  /* Bold heading */
+    color: #ff7785;  /* Stylish pinkish red */
+    margin: 0;  /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  /* Light shadow for subtle depth */
+}
+
+.adjustsndm p {
+    font-size: 12px;  /* Smaller paragraph text */
+    font-weight: 400;  /* Normal weight */
+    color: rgb(180, 180, 180);  /* Light grey color for subtle contrast */
+}
+
+
+.bottom {
+    bottom: -40px;  
+    left: 56%;
+    transform: translateX(-50%);
+    width: 130px;  
+    height: 130px;  
+    overflow: hidden;
+    /* padding: 53px 45px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: rgba(19, 40, 88, 0.12) 0px 30px 50px 0px;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+
+.left {
+    left: -50px;  
+    top: 41%;
+    transform: translateY(-50%);
+    width: 120px;  
+    height: 120px;  
+    overflow: hidden;
+    /* padding: 53px 45px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: rgba(19, 40, 88, 0.12) 0px 30px 50px 0px;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+
+.smaleft h1{
+    font-size: 24px;  /* Slightly larger font */
+    font-weight: 600;  /* Bold heading */
+    color: #36d9ff;
+    margin: 0;  /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.smaleft p {
+    font-size: 12px;  /* Smaller paragraph text */
+    font-weight: 400;  /* Normal weight */
+    color: rgb(180, 180, 180);  /* Light grey color for subtle contrast */
+}
+
+.right {
+    right: -50px;  
+    top: 52%;
+    transform: translateY(-50%);
+    width: 140px;  
+    height: 140px;  
+    overflow: hidden;
+    /* padding: 53px 45px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: rgba(19, 40, 88, 0.12) 0px 30px 50px 0px;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+
+.smaright h1{
+    text-align: center;
+    font-size: 24px;  /* Slightly larger font */
+    font-weight: 600;  /* Bold heading */
+    color: #22883f;
+    margin: 0;  /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.smaright p {
+    font-size: 12px;  /* Smaller paragraph text */
+    font-weight: 400;  /* Normal weight */
+    color: rgb(180, 180, 180);  /* Light grey color for subtle contrast */
+}
+
+
+.smabottom h1{
+    text-align: center;
+    font-size: 18px;  /* Slightly larger font */
+    font-weight: 600;  /* Bold heading */
+    margin: 0;  /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #6f36ff;
+}
+.smabottom p {
+    font-size: 11px;  /* Smaller paragraph text */
+    font-weight: 400;  /* Normal weight */
+    color: rgb(180, 180, 180);  /* Light grey color for subtle contrast */
+}
+.extrap{
+    font-size: 8px !important;
+}
+
+.background-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    background-color: rgb(255, 255, 255);  /* Light translucent blue */
+    border-radius: 12px;  /* Rounded corners */
+    left: 50%;
+    top: 45.5%;
+
+    transform: translate(-50%, -50%);  /* Center it */
+    z-index: 0;  /* Behind the circles */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+}
+.background-rectangle h1{
+    padding-top: 2px;
+    font-size: 32px;  /* Slightly larger font */
+    font-weight: 800;
+    color: #255dbe;  /* Pinkish-red for vibrancy */
+    text-align: center;
+}
+.adjustrectangel p {
+    font-size: 18px;  /* Smaller paragraph text */
+    font-weight: 500;  /* Normal weight */
+    color: rgb(180, 180, 180); 
+    text-align: center;
+}
+/* New Circle Styles */
+.new-circle-1, .new-circle-2 {
+   
+    border-radius: 50%;   /* Perfect circle */
+    position: absolute;   /* To position them below the main div */
+}
+
+/* Yellow Circle - HEX #fece7a */
+.new-circle-1 {
+    opacity: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fece7a;
+    top: -20px;   /* Positioned below the main circle */
+    left: -5%;       /* Offset to the left */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.01);  /* Soft shadow */
+}
+
+/* Pink Circle - HEX #ffa0ab */
+.new-circle-2 {
+    opacity: 50%;
+
+    width: 50px;
+    height: 50px;
+    background-color: #ffa0ab;
+    top: -15px;   /* Same height as the other */
+    right: -5%;      /* Offset to the right */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.01);  /* Soft shadow */
+}
+
+.new-circle-3 {
+    opacity: 40%;
+
+    width: 30px;
+    height: 30px;
+    background-color: #20c1f5;
+    bottom: 14%;
+    left: -17%;     /* Offset to the right */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.01);  /* Soft shadow */
+}
+
+.new-circle-4 {
+    opacity: 40%;
+
+    width: 15px;
+    height: 15px;
+    background-color: #7338ff;
+    bottom: 10%;
+    left: 90%;      /* Offset to the right */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.01);  /* Soft shadow */
+}
+
+
+.eb-wrapper-outer.eb-wrapper-75wa70hmob {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(90deg, rgba(252, 254, 255, 1) 0%, rgba(234, 248, 255, 1) 100%);
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+    transition: background 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+.eb-wrapper-outer.eb-wrapper-75wa70hmob:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url(obj.webp);
+    opacity: 0.5;
+    background-position: top left;
+    background-repeat: no-repeat;
+    transition: background 0.5s, opacity 0.5s, filter 0.5s;
+}
+
+
+
+  @media screen and (max-width:1180px) {
+    .eb-wrapper-outer.eb-wrapper-75wa70h > .eb-wrapper-inner > .eb-wrapper-inner-blocks {
+      
+        padding: 0 50px;
+    }
+    
+  }
+  @media screen and (max-width: 1080px) {
+    .laptop-view {
+      display: none;
+    }
+  
+    .counterwraper-mobile {
+      display: block; /* Display mobile version */
+    }
+  
+    .counterwraper-mobile .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* For smaller cards */
+      gap: 1rem;
+    }
+  }

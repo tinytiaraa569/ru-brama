@@ -162,8 +162,8 @@ const HomeSec1Variant8 = () => {
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-1 md:mb-6" />
             <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-light opacity-90 leading-relaxed px-10 sm:px-0">
-              From design to final polish, each stage of creation is perfected
-              with precision, passion, and artistry.
+              From design to finished Jewelry, each stage of creation is perfected
+              with precision, passion and artistry.
             </p>
           </div>
         </div>

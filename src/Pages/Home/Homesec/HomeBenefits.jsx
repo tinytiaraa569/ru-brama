@@ -248,7 +248,7 @@ const benefits = [
   {
     icon: Crown,
     title: "Focus on Growth",
-    description: "Relax and free yourself from manufacturing worries & heavy investment in infrastructure.",
+    description: "You concentrate on building your brand, marketing, and sales while we manage the rest.",
   },
   {
     icon: Zap,
@@ -282,8 +282,8 @@ const benefits = [
   },
   {
     icon: Rocket,
-    title: "Scale with Confidence",
-    description: "Grow your business without worrying about production capacity or quality control.",
+    title: "Relax",
+    description: "Free yourself from manufacturing worries & heavy investment in infrastructure.",
   },
 ]
 

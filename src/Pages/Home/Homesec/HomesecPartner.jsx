@@ -133,7 +133,7 @@ function HomesecPartner() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <h2 className="text-md md:text-2xl font-bold text-gray-900">We Sparkles in their Shine</h2>
+          <h2 className="text-md md:text-2xl font-bold text-gray-900">We Sparkle in their Shine</h2>
 
            <div className="flex justify-center mt-3">
             <motion.div

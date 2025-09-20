@@ -6,6 +6,7 @@ import ServiceSection from './Homesec/ServiceSection'
 import HomeBenefits from './Homesec/HomeBenefits'
 import HomeGallery from './Homesec/HomeGallery'
 import SEO from '@/Seo/Seo'
+import HomePassionate from './Homesec/HomePassionate'
 
 const Home = () => {
    useEffect(() => {
@@ -30,6 +31,7 @@ const Home = () => {
     <HomesecPartner />
 
     <ServiceSection />
+    {/* <HomePassionate /> */}
     <HomeBenefits />
     <HomeGallery />
 
