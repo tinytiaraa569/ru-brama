@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Gem, Palette, Shield, Star, Users, Zap } from "lucide-react"
 import aboutsection2img from './aboutsection2.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -28,6 +29,7 @@ const scaleIn = {
 }
 
 const Aboutsection2 = () => {
+  const navigate = useNavigate()
   return (
     <div>
          {/* Mission & Values Section */}
@@ -66,7 +68,7 @@ const Aboutsection2 = () => {
             
             <div className='my-6'>
 
-              <Button className="px-5 py-2 cursor-pointer">
+              <Button className="px-5 py-2 cursor-pointer" onClick={()=>{navigate("/jewelry-manufacturing-process")}}>
                 Explore Manufacturing
               </Button>
             </div>

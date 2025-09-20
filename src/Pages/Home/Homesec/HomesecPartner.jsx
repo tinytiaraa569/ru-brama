@@ -133,7 +133,7 @@ function HomesecPartner() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <h2 className="text-md md:text-2xl font-bold text-gray-900">Our Trusted Partners</h2>
+          <h2 className="text-md md:text-2xl font-bold text-gray-900">We Sparkles in their Shine</h2>
 
            <div className="flex justify-center mt-3">
             <motion.div
@@ -176,8 +176,8 @@ function HomesecPartner() {
                       <img
                         src={partner.logo || "/placeholder.svg"}
                         alt={partner.name}
-                        className={`object-contain transition-all duration-300 ${
-                          partner.name === "TinyTiaraa" ? "h-16 w-auto max-w-[180px]" : "h-12 w-auto max-w-[180px]"
+                        className={` transition-all duration-300 ${
+                          partner.name === "Tiny Tiaraa" ? "h-16  max-w-[220px]" : "h-12 w-auto max-w-[180px] object-contain"
                         }`}
                       />
                     </motion.div>

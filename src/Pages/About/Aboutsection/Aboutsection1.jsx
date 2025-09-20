@@ -86,10 +86,12 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import aboutsec1img from './about1img.jpg'
+import { useNavigate } from "react-router-dom"
 
 
 // Variant 1: Smooth Fade with Sliding Overlay
 const Aboutsection1 = () => {
+  const navigate = useNavigate()
   return (
     <div className="min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[85vh] bg-background">
       <motion.section
@@ -141,7 +143,7 @@ const Aboutsection1 = () => {
               pieces with unmatched precision and artistry.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="cursor-pointer text-sm sm:text-md px-3 py-3 sm:px-6 sm:py-5 bg-white text-black hover:bg-white/80 ">
+              <Button onClick={()=>{navigate("/jewelry-manufacturing-process")}} className="cursor-pointer text-sm sm:text-md px-3 py-3 sm:px-6 sm:py-5 bg-white text-black hover:bg-white/80 ">
                 Discover Our Process
               </Button>
             </motion.div>

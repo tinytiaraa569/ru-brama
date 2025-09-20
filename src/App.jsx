@@ -7,6 +7,8 @@ import { useEffect } from "react"
 import JewelryManufacturing from "./Pages/JewelryManufacturing/JewelryManufacturing"
 import ScrollToTopButton from "./Pages/ScrollToTopButton/ScrollToTopButton"
 import Footer from "./Pages/Footer/Footer"
+import Contact from "./Pages/Contact/Contact"
+import Gallery from "./Pages/Gallery/Gallery"
 
 
 function App() {
@@ -24,6 +26,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/gallery" element={<Gallery />} />
+
+
 
       <Route path="/jewelry-manufacturing-process" element={<JewelryManufacturing />} />
 

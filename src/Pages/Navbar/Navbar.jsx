@@ -173,6 +173,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import blacklogo from './Images/blacklogo.png'
+import { GetStartedDialog } from "../GetStarted/GetStarted"
 
 
 function Navbar() {
@@ -184,8 +185,8 @@ function Navbar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Manufacturing", href: "/jewelry-manufacturing-process" },
-    { name: "Company", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ]
 
   return (
@@ -245,7 +246,7 @@ function Navbar() {
 
               {/* CTA Buttons */}
               <div className="hidden md:flex items-center space-x-4">
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9, type: "spring" }}
@@ -253,13 +254,16 @@ function Navbar() {
                   <Button variant="outline" size="sm" className="cursor-pointer">
                     Login
                   </Button>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.0, type: "spring" }}
                 >
-                  <Button size="sm" className="cursor-pointer">Get Started</Button>
+                  <GetStartedDialog>
+
+                  <Button size="lg" className="cursor-pointer px-4">Get Started</Button>
+                  </GetStartedDialog>
                 </motion.div>
               </div>
 
@@ -345,9 +349,9 @@ function Navbar() {
 
                 {/* CTA Buttons */}
                 <div className="p-4 border-t border-border space-y-3">
-                  <Button variant="outline" className="w-full bg-transparent" onClick={() => setIsOpen(false)}>
+                  {/* <Button variant="outline" className="w-full bg-transparent" onClick={() => setIsOpen(false)}>
                     Login
-                  </Button>
+                  </Button> */}
                   <Button className="w-full" onClick={() => setIsOpen(false)}>
                     Get Started
                   </Button>

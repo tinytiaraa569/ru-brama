@@ -126,6 +126,9 @@ import SEO from "@/Seo/Seo"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
+import ServiceSection from "../Home/Homesec/ServiceSection"
+import { Button } from "@/components/ui/button"
+import { GetStartedDialog } from "../GetStarted/GetStarted"
 
 const JewelryManufacturingVariant3 = () => {
 
@@ -434,7 +437,7 @@ const JewelryManufacturingVariant3 = () => {
       </div>
 
       {/* Steps Section */}
-      <div className="py-2 sm:py-10">
+      <div className="py-2 sm:py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20 sm:space-y-32">
             {steps.map((step, index) => (
@@ -443,7 +446,21 @@ const JewelryManufacturingVariant3 = () => {
           </div>
         </div>
       </div>
+
+
+      <div className="flex justify-center my-5 py-2 sm:pb-10">
+        <GetStartedDialog>
+
+        <Button className="cursor-pointer">
+
+        Get Started Now
+        </Button>
+        </GetStartedDialog>
+      </div>
     </div>
+
+        <ServiceSection />
+    
     </>
 
   )

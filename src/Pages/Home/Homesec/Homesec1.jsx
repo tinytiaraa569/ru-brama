@@ -158,7 +158,7 @@ const HomeSec1Variant8 = () => {
             style={{ transitionDuration: "1500ms", transitionDelay: "2500ms" }}
           >
             <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-thin mb-1 md:mb-6 tracking-wide">
-              Every Step, Every Sparkle
+              Sparkle At Every Step
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-1 md:mb-6" />
             <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-light opacity-90 leading-relaxed px-10 sm:px-0">

@@ -2,6 +2,8 @@ import React from 'react'
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { GetStartedDialog } from '@/Pages/GetStarted/GetStarted'
+import { useNavigate } from 'react-router-dom'
 
 
 const fadeInUp = {
@@ -14,6 +16,7 @@ const fadeInUp = {
 
 
 const AboutCta = () => {
+  const navigate = useNavigate()
   return (
     <div>
           {/* CTA Section */}
@@ -31,17 +34,20 @@ const AboutCta = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <GetStartedDialog >
+
               <Button  variant="secondary" className="cursor-pointer text-sm sm:text-lg px-4 sm:px-8 py-3 sm:py-6">
                 Start Your Project
               </Button>
+              </GetStartedDialog>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
-                
+                onClick={()=>{navigate("/gallery")}}
                 variant="outline"
                 className="cursor-pointer text-sm sm:text-lg px-4 sm:px-8 py-3 sm:py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
               >
-                View Portfolio
+                View Gallery
               </Button>
             </motion.div>
           </div>

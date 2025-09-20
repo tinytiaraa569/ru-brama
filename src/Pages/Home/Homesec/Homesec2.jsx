@@ -524,7 +524,7 @@ function Homesec2() {
     },
     {
       icon: Factory,
-      value: "15,000",
+      value: "4,000",
       label: "Sq Ft Facility",
       description: "State-of-the-art manufacturing space",
     },
@@ -574,7 +574,7 @@ function Homesec2() {
         </motion.div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-2 md:mb-6">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -600,7 +600,7 @@ function Homesec2() {
         </div>
 
         {/* Features */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -648,7 +648,7 @@ function Homesec2() {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

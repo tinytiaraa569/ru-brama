@@ -11,8 +11,8 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Manufacturing", href: "/jewelry-manufacturing-process" },
-    { name: "Company", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ]
 
   const containerVariants = {
