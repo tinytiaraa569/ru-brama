@@ -439,7 +439,7 @@ function HomeBenefits() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://cdn.shopaccino.com/kosh/images/polishing2-951042.jpg"
+                  src="https://images.pexels.com/photos/2219195/pexels-photo-2219195.jpeg"
                   alt="Jewelry design"
                   className="w-full h-full object-cover"
                 />
@@ -464,7 +464,7 @@ function HomeBenefits() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://cdn.shopaccino.com/kosh/images/polishing2-951042.jpg"
+                  src="https://images.pexels.com/photos/848205/pexels-photo-848205.jpeg"
                   alt="Jewelry showcase"
                   className="w-full h-full object-cover"
                 />
@@ -548,7 +548,7 @@ function HomeBenefits() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://cdn.shopaccino.com/kosh/images/polishing2-951042.jpg"
+                  src="https://images.pexels.com/photos/2219195/pexels-photo-2219195.jpeg"
                   alt="Jewelry design"
                   className="w-full h-full object-cover"
                 />
@@ -573,7 +573,7 @@ function HomeBenefits() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://cdn.shopaccino.com/kosh/images/polishing2-951042.jpg"
+                  src="https://images.pexels.com/photos/848205/pexels-photo-848205.jpeg"
                   alt="Jewelry showcase"
                   className="w-full h-full object-cover"
                 />
