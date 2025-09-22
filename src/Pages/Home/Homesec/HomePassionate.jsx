@@ -501,6 +501,7 @@ const dotVariants = {
                                       className={`small-circle top !bg-white !border-slate-200 relative transform transition-all duration-800 delay-400 hover:scale-110 hover:rotate-1 hover:shadow-lg cursor-pointer animate-float ${
                                         isVisible ? "scale-100 opacity-100 rotate-0" : "scale-0 opacity-0 -rotate-180"
                                       }`}
+                                      
                                       onMouseEnter={() => setHoveredCircle("diamond")}
                                       onMouseLeave={() => setHoveredCircle(null)}
                                     >
