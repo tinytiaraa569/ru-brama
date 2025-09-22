@@ -264,16 +264,50 @@
 // export default Homecount;
 
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import "./homepassionate.css"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { useNavigate } from "react-router-dom"
+import { useInView , motion } from "framer-motion"
 
 const HomePassionate = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [isVisible2, setIsVisible2] = useState(false)
   const [hoveredCircle, setHoveredCircle] = useState(null)
   const navigate = useNavigate()
+
+   const ref = useRef(null);
+  const isInView = useInView(ref, { once: false , amount: 0.3 }); // triggers when 30% visible, runs once
+
+  const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.3 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const paragraphVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } },
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.9 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut", delay: 0.6 } },
+  hover: { scale: 1.05, rotate: 2, boxShadow: "0px 8px 20px rgba(0,0,0,0.2)" },
+};
+
+const dotVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: (customDelay) => ({
+      opacity: 0.6,
+      scale: 1,
+      transition: { duration: 0.6, delay: customDelay, ease: "easeOut" },
+    }),
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 300)
@@ -283,6 +317,8 @@ const HomePassionate = () => {
       clearTimeout(timer2)
     }
   }, [])
+
+  
 
   const materialData = {
   diamond: {
@@ -390,40 +426,39 @@ const HomePassionate = () => {
                           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                         }`}
                       >
-                        <div className="space-y-6">
-                          <div
-                            className={`transform transition-all duration-800 delay-300 ${
-                              isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
-                            }`}
-                          >
+                          <motion.div
+                          ref={ref}
+                          className="space-y-6"
+                          variants={containerVariants}
+                          initial="hidden"
+                          animate={isInView ? "visible" : "hidden"}
+                        >
+                          {/* Heading */}
+                          <motion.div variants={itemVariants}>
                             <h1 className="text-4xl font-extrabold text-slate-800 leading-tight uppercase">
-                              Over 1 <span className="text-slate-600">Lakh+ </span> Design's
+                              Over 1 <span className="text-slate-600">Lakh+ </span> Designs
                             </h1>
                             <h1 className="text-4xl font-extrabold text-slate-900 leading-tight uppercase">
                               Completed
                             </h1>
-                          </div>
+                          </motion.div>
 
-                          <p
-                            className={`text-lg text-slate-600 leading-relaxed text-justify transform transition-all duration-800 delay-500 ${
-                              isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-                            }`}
-                          >
-                            At Ru-Brama, every piece is a testament to timeless craftsmanship. Our artisans blend
-                            traditional techniques with modern finesse, handcrafting each jewel with unmatched detail,
-                            passion, and precision. Because true beauty lies in the hands that create it.
-                          </p>
+                          {/* Paragraph */}
+                          <motion.p variants={paragraphVariants} className="text-lg text-slate-600 leading-relaxed text-justify">
+                            At Ru-Brama, every piece is a testament to timeless craftsmanship. Our artisans blend traditional techniques
+                            with modern finesse, handcrafting each jewel with unmatched detail, passion, and precision. Because true beauty
+                            lies in the hands that create it.
+                          </motion.p>
 
-                          <button
-                            className={`cursor-pointer px-8 py-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-lg rounded-full shadow-lg hover:from-slate-700 hover:to-slate-800 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out transform ${
-                              isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-                            }`}
-                            style={{ transitionDelay: "700ms" }}
-                            onClick={()=>{navigate("/jewelry-manufacturing-process")}}
+                          {/* Button */}
+                          <motion.button
+                            variants={buttonVariants}
+                            className="cursor-pointer px-8 py-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-lg rounded-full shadow-lg transition-all duration-300 ease-in-out transform"
+                            onClick={() => navigate("/jewelry-manufacturing-process")}
                           >
                             Explore Collection
-                          </button>
-                        </div>
+                          </motion.button>
+                        </motion.div>
                       </div>
 
                       <div className="counterwraper eb-parent-eb-column-zrlittl flex justify-end wp-block-essential-blocks-column">
@@ -614,22 +649,42 @@ const HomePassionate = () => {
                                   </>
                                 )}
 
-                                <div
+                                <motion.div
+                                variants={dotVariants}
+                                custom={0}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ amount: 0.3, once: false }}
                                   className={`small-circle new-circle-1 !bg-slate-300 transform transition-all duration-600 delay-1200 ${
                                     isVisible ? "scale-100 opacity-60" : "scale-0 opacity-0"
                                   }`}
                                 />
-                                <div
+                                <motion.div
+                                  variants={dotVariants}
+                                  custom={0.2}
+                                  initial="hidden"
+                                  whileInView="visible"
+                                  viewport={{ amount: 0.3, once: false }}
                                   className={`small-circle new-circle-2 !bg-slate-400 transform transition-all duration-600 delay-1400 ${
                                     isVisible ? "scale-100 opacity-60" : "scale-0 opacity-0"
                                   }`}
                                 />
-                                <div
+                                <motion.div
+                                 variants={dotVariants}
+                                  custom={0.4}
+                                  initial="hidden"
+                                  whileInView="visible"
+                                  viewport={{ amount: 0.3, once: false }}
                                   className={`small-circle new-circle-3 !bg-slate-500 transform transition-all duration-600 delay-1600 ${
                                     isVisible ? "scale-100 opacity-60" : "scale-0 opacity-0"
                                   }`}
                                 />
-                                <div
+                                <motion.div
+                                  variants={dotVariants}
+                                  custom={0.6}
+                                  initial="hidden"
+                                  whileInView="visible"
+                                  viewport={{ amount: 0.3, once: false }}
                                   className={`small-circle new-circle-4 !bg-slate-600 transform transition-all duration-600 delay-1800 ${
                                     isVisible ? "scale-100 opacity-60" : "scale-0 opacity-0"
                                   }`}
@@ -656,12 +711,12 @@ const HomePassionate = () => {
                 isVisible2 ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
               }`}
             >
-              <h1 className="text-4xl font-extrabold text-slate-800 leading-tight uppercase">
-              Crafting <span className="text-slate-600">Timeless</span> Masterpieces
-            </h1>
-            <h1 className="text-4xl font-extrabold text-slate-900 leading-tight uppercase">
-              With Passion & Precision
-            </h1>
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-800 leading-tight uppercase">
+               Over 1 Lakh+ Design's
+             </h1>
+             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-black leading-tight uppercase">
+               Completed
+             </h1>
             </div>
 
             <p
