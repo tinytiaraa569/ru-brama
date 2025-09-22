@@ -254,7 +254,7 @@ const ContactSection2 = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Award, number: 25, suffix: "+", desc: "Years Experience" },
+              { icon: Award, number: 50, suffix: "+", desc: "Skilled Artisans" },
               { icon: Users, number: 500, suffix: "+", desc: "Satisfied Clients" },
               { icon: Gem, number: 10000, suffix: "+", desc: "Pieces Crafted" },
               { icon: Shield, number: 100, suffix: "%", desc: "Quality Assured" },

@@ -12,8 +12,8 @@ const TopBar = () => {
         transition={{ duration: 0.5 }}
         className="bg-primary text-primary-foreground py-2 text-xs sm:text-sm"
       >
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center space-x-6">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:justify-between">
+          <div className="hidden md:flex items-center space-x-6">
               <a href="tel:+918657062519">
 
             <div className="flex items-center space-x-2">
@@ -31,8 +31,8 @@ const TopBar = () => {
           </a>
 
           </div>
-          <div className="hidden md:block">
-            <span>White label your Precious Jewelry</span>
+          <div className="block">
+            <span className='text-center'>White label your Precious Jewelry</span>
           </div>
         </div>
       </motion.div>
