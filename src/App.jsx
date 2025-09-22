@@ -9,6 +9,7 @@ import ScrollToTopButton from "./Pages/ScrollToTopButton/ScrollToTopButton"
 import Footer from "./Pages/Footer/Footer"
 import Contact from "./Pages/Contact/Contact"
 import Gallery from "./Pages/Gallery/Gallery"
+import NotFound from "./Pages/NotFound/NotFound"
 
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
 
 
       <Route path="/jewelry-manufacturing-process" element={<JewelryManufacturing />} />
+
+
+      <Route path="*" element={<NotFound />} />
+
 
 
       

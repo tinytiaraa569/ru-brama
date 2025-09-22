@@ -30,8 +30,8 @@ const Home = () => {
     <Homesec2 />
     <HomesecPartner />
 
-    <ServiceSection />
-    {/* <HomePassionate /> */}
+    {/* <ServiceSection /> */}
+    <HomePassionate />
     <HomeBenefits />
     <HomeGallery />
 
