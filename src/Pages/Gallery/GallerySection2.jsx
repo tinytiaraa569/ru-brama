@@ -14,9 +14,38 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+
 import earring1 from './GalleryImages/earring1.webp'
-import bracelets1 from './GalleryImages/bracelets1.webp'
+import earring2 from './GalleryImages/earring2.webp'
+import earring3 from './GalleryImages/earring3.webp'
+import earring4 from './GalleryImages/earring4.webp'
+
+
+
+
 import sets1 from './GalleryImages/sets1.webp'
+import sets2 from './GalleryImages/sets2.webp'
+
+
+import bracelets1 from './GalleryImages/bracelets1.webp'
+import bracelets2 from './GalleryImages/bracelets2.webp'
+import bracelets3 from './GalleryImages/bracelets3.webp'
+import bracelets4 from './GalleryImages/bracelets4.webp'
+import bracelets5 from './GalleryImages/bracelets5.webp'
+import bracelets6 from './GalleryImages/bracelets6.webp'
+
+
+
+import pendant1 from './GalleryImages/pendant1.webp'
+import pendant2 from './GalleryImages/pendant2.webp'
+
+
+
+
+
+import payal1 from './GalleryImages/payal1.webp'
+
+
 
 
 
@@ -43,49 +72,49 @@ const galleryImages = [
     relatedImage: [],
   },
   {
-    src: "https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg",
+    src: bracelets2,
     alt: "Stack of bangles in gold and silver",
     title: "Bangles",
     category: "Bracelets",
   },
   {
-    src: "https://images.pexels.com/photos/6858599/pexels-photo-6858599.jpeg",
+    src: bracelets3,
     alt: "Pearl necklace on display stand",
     title: "Pearl Necklace",
     category: "Necklaces",
   },
   {
-    src: "https://images.pexels.com/photos/6263143/pexels-photo-6263143.jpeg",
+    src: sets2,
     alt: "Luxury watch on leather strap",
     title: "Luxury Watch",
     category: "Watches",
   },
   {
-    src: "https://images.pexels.com/photos/4544816/pexels-photo-4544816.jpeg",
+    src: earring2,
     alt: "Elegant gemstone bracelet",
     title: "Gemstone Bracelet",
     category: "Bracelets",
   },
   {
-    src: "https://images.pexels.com/photos/1841546/pexels-photo-1841546.jpeg",
+    src: payal1,
     alt: "Choker necklace with diamonds",
     title: "Diamond Choker",
     category: "Necklaces",
   },
   {
-    src: "https://images.pexels.com/photos/6567673/pexels-photo-6567673.jpeg",
+    src: bracelets4,
     alt: "Stud earrings with emeralds",
     title: "Emerald Studs",
     category: "Earrings",
   },
   {
-    src: "https://images.pexels.com/photos/3640960/pexels-photo-3640960.jpeg",
+    src: bracelets5,
     alt: "Gold chain bracelet",
     title: "Gold Chain",
     category: "Bracelets",
   },
   {
-    src: "https://images.pexels.com/photos/3023668/pexels-photo-3023668.jpeg",
+    src: earring3,
     alt: "Minimalist platinum band",
     title: "Platinum Band",
     category: "Rings",
@@ -97,25 +126,25 @@ const galleryImages = [
     category: "Rings",
   },
   {
-    src: "https://images.pexels.com/photos/9428788/pexels-photo-9428788.jpeg",
+    src: earring4,
     alt: "Luxury diamond-studded watch",
     title: "Diamond Watch",
     category: "Watches",
   },
   {
-    src: "https://images.pexels.com/photos/16935587/pexels-photo-16935587.jpeg",
+    src: pendant1,
     alt: "Ruby pendant necklace",
     title: "Ruby Pendant",
     category: "Necklaces",
   },
   {
-    src: "https://images.pexels.com/photos/10976653/pexels-photo-10976653.jpeg",
+    src: pendant2,
     alt: "Silver charm bracelet",
     title: "Charm Bracelet",
     category: "Bracelets",
   },
   {
-    src: "https://images.pexels.com/photos/16113887/pexels-photo-16113887.jpeg",
+    src: bracelets6,
     alt: "Traditional wedding jewelry set",
     title: "Bridal Set",
     category: "Collections",
