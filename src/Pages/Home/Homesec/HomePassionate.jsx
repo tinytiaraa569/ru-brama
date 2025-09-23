@@ -269,6 +269,8 @@ import "./homepassionate.css"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { useNavigate } from "react-router-dom"
 import { useInView , motion } from "framer-motion"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 const HomePassionate = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -278,6 +280,10 @@ const HomePassionate = () => {
 
    const ref = useRef(null);
   const isInView = useInView(ref, { once: false , amount: 0.3 }); // triggers when 30% visible, runs once
+
+  const [openDialog, setOpenDialog] = useState(null); // 'diamond', 'cvd', 'metals', 'enamel'
+const isMobile = window.innerWidth <= 768; // simple mobile check
+
 
   const containerVariants = {
   hidden: {},
@@ -323,36 +329,36 @@ const dotVariants = {
   const materialData = {
   diamond: {
     title: "Diamond",
-    subtitle: "Natural Diamonds • Lab-Grown Diamonds",
+    subtitle: "Natural Diamonds",
     details:
-      "Exceptional brilliance and clarity in both natural and lab-grown diamonds. Available in round, princess, oval, cushion, and other popular cuts.",
+      "Formed deep within the Earth over billions of years, natural diamonds are treasured for their unmatched rarity, brilliance, and timeless value. Available in round, princess, oval, cushion, and other popular cuts.",
     color: "from-blue-50 to-blue-100",
     textColor: "text-blue-900",
     borderColor: "border-blue-200",
   },
-  colorstone: {
-    title: "Colorstones",
-    subtitle: "Ruby • Sapphire • Emerald • Tanzanite • Amethyst • Topaz",
+   colorstone: {
+    title: "CVD",
+    subtitle: "LabGrown Diamond",
     details:
       "A spectrum of vivid gemstones—fiery rubies, royal sapphires, lush emeralds, mystical amethysts, oceanic topaz, and rare tanzanites—each telling its own story of color and energy.",
     color: "from-emerald-50 to-emerald-100",
     textColor: "text-emerald-900",
     borderColor: "border-emerald-200",
   },
-  metals: {
-    title: "Precious Metals",
-    subtitle: "Gold • Silver • Platinum • Rhodium",
-    details:
-      "Crafted in 18K & 22K Gold, Sterling Silver, and timeless Platinum. Rhodium finishes available for added brilliance and durability. Each metal is ethically sourced and hallmarked.",
-    color: "from-yellow-50 to-yellow-100",
-    textColor: "text-yellow-900",
-    borderColor: "border-yellow-200",
-  },
+    metals: {
+      title: "Metals",
+      subtitle: "Gold • Platinum • Silver",
+      details:
+        "<b>Gold:</b> Available in 18K & 22K, offering a perfect balance of purity and strength, with yellow, white, and rose finishes.<br /><b>Platinum:</b> A rare, naturally white metal known for its durability, hypoallergenic properties, and timeless elegance.<br /><b>Silver:</b> Crafted from sterling silver, offering versatile designs with rhodium finishes for enhanced brilliance and tarnish resistance.<br />Each metal is ethically sourced and hallmarked for authenticity.",
+      color: "from-yellow-50 to-yellow-100",
+      textColor: "text-yellow-900",
+      borderColor: "border-yellow-200",
+    },
   enamel: {
-    title: "Enameling",
-    subtitle: "Vibrant Artistic Finishes",
+    title: "Colorstones",
+    subtitle: "Natural Colorstones",
     details:
-      "Traditional meenakari and contemporary enamel artistry—bringing bold reds, serene blues, deep greens, and pastel hues to life. Durable, glossy, and timelessly colorful.",
+    "<b>Emerald:</b> Known for its deep green hue, symbolizing growth, renewal, and luxury.<br /><b>Ruby:</b> Vibrant red stone representing passion, strength, and timeless elegance.<br /><b>Sapphire:</b> Ranging from royal blue to pastel shades, prized for wisdom, loyalty, and durability.<br /><b>Other Colorstones:</b> Traditional meenakari and contemporary enamel artistry bring bold reds, serene blues, deep greens, and pastel hues to life. Durable, glossy, and timelessly colorful.",
     color: "from-purple-50 to-purple-100",
     textColor: "text-purple-900",
     borderColor: "border-purple-200",
@@ -557,8 +563,8 @@ const dotVariants = {
                                           <p className="text-xs opacity-80">
                                             {materialData.colorstone.subtitle}
                                           </p>
-                                          <p className="text-xs opacity-70">
-                                            {materialData.colorstone.details}
+                                          <p className="text-xs opacity-70" dangerouslySetInnerHTML={{ __html: materialData.colorstone.details }}>
+                                            
                                           </p>
                                         </div>
                                       </TooltipContent>
@@ -604,9 +610,10 @@ const dotVariants = {
                                           <p className="text-xs  opacity-80">
                                             {materialData.metals.subtitle}
                                           </p>
-                                          <p className="text-xs  opacity-70">
-                                            {materialData.metals.details}
-                                          </p>
+                                          <p
+                                          className="text-xs opacity-70"
+                                          dangerouslySetInnerHTML={{ __html: materialData.metals.details }}
+                                        ></p>
                                         </div>
                                       </TooltipContent>
                                       
@@ -639,8 +646,8 @@ const dotVariants = {
                                           <p className="text-xs  opacity-80">
                                             {materialData.enamel.subtitle}
                                           </p>
-                                          <p className="text-xs  opacity-70">
-                                            {materialData.enamel.details}
+                                          <p className="text-xs  opacity-70" dangerouslySetInnerHTML={{ __html: materialData.enamel.details }}>
+                                            
                                           </p>
                                         </div>
                                       </TooltipContent>
@@ -730,81 +737,94 @@ const dotVariants = {
             <div className="grid grid-cols-2 gap-6 mt-8 mb-8">
               {isVisible2 && (
                 <>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-200 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Diamond </h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">Natural Diamond</p>
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs p-3">
-                      <p className="text-sm">{materialData.diamond.details}</p>
-                    </TooltipContent>
-                  </Tooltip>
+                 {/* Diamond */}
+                <div
+                  className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-200 hover:scale-105 hover:shadow-xl cursor-pointer"
+                  onClick={() => isMobile && setOpenDialog("diamond")}
+                >
+                  <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Diamond</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 text-center">Natural Diamond</p>
+                </div>
 
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-400 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">CVD</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">LabGrown Diamond</p>
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs p-3">
-                      <p className="text-sm">{materialData.colorstone.details}</p>
-                    </TooltipContent>
-                  </Tooltip>
+            {/* CVD */}
+              <div
+                className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-400 hover:scale-105 hover:shadow-xl cursor-pointer"
+                onClick={() => isMobile && setOpenDialog("cvd")}
+              >
+                <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">CVD</h3>
+                <p className="text-xs sm:text-sm text-slate-500 text-center">LabGrown Diamond</p>
+              </div>
 
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-600 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Metals</h3>
-                          <div className="flex gap-1.5">
-                        <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
+              {/* Metals */}
+              <div
+                className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-600 hover:scale-105 hover:shadow-xl cursor-pointer"
+                onClick={() => isMobile && setOpenDialog("metals")}
+              >
+                <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Metals</h3>
+                <div className="flex gap-1.5">
+                  <p className="!text-xs !text-slate-500 flex items-center gap-0.5"><span className="w-1 h-1 bg-slate-500 rounded-full"></span> Gold</p>
+                  <p className="!text-xs !text-slate-500 flex items-center gap-0.5"><span className="w-1 h-1 bg-slate-500 rounded-full"></span> Platinum</p>
+                  <p className="!text-xs !text-slate-500 flex items-center gap-0.5"><span className="w-1 h-1 bg-slate-500 rounded-full"></span> Silver</p>
+                </div>
+              </div>
 
-                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Gold
-                                      </p>
-                                      
-                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
-                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Platinum
-                                      </p>
-                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
-                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Silver
-                                      </p>
-                          </div>
+            {/* Enamel */}
+                <div
+                  className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-800 hover:scale-105 hover:shadow-xl cursor-pointer"
+                  onClick={() => isMobile && setOpenDialog("enamel")}
+                >
+                  <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Natural</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 text-center">ColorStones</p>
+                </div>
+                      </>
+                    )}
+                  </div>
 
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs p-3">
-                      <p className="text-sm">{materialData.metals.details}</p>
-                    </TooltipContent>
-                  </Tooltip>
+                  <button
+                    className={`cursor-pointer px-8 py-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-lg rounded-full shadow-lg hover:from-slate-700 hover:to-slate-800 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out transform ${
+                      isVisible2 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+                    }`}
+                    style={{ transitionDelay: "1000ms" }}
+                    onClick={()=>{navigate("/jewelry-manufacturing-process")}}
+                  >
+                    Explore Manufacturing
+                  </button>
+                  {isMobile && openDialog && (
+                  <Dialog open={true} onOpenChange={() => setOpenDialog(null)}>
+                    <DialogContent className="p-4 rounded-lg max-w-sm mx-auto  bg-white shadow-xl">
+                      <h3 className="font-bold text-lg mb-2">
+                        {openDialog === "diamond" && "Diamond"}
+                        {openDialog === "cvd" && "CVD"}
+                        {openDialog === "metals" && "Metals"}
+                        {openDialog === "enamel" && "Natural ColorStones"}
+                      </h3>
+                      <p
+                        className="text-sm"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            openDialog === "diamond"
+                              ? materialData.diamond.details
+                              : openDialog === "cvd"
+                              ? materialData.colorstone.details
+                              : openDialog === "metals"
+                              ? materialData.metals.details
+                              : materialData.enamel.details,
+                        }}
+                      ></p>
 
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-800 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Natural</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">ColorStones</p>
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs p-3">
-                      <p className="text-sm">{materialData.enamel.details}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </>
-              )}
-            </div>
+                      <Button
+                        className="mt-4 px-4 py-2 cursor-pointer"
+                        onClick={() => setOpenDialog(null)}
+                      >
+                        Close
+                      </Button>
+                    </DialogContent>
+                  </Dialog>
+                )}
+                </div>
+              </div>
+        
 
-            <button
-              className={`cursor-pointer px-8 py-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-lg rounded-full shadow-lg hover:from-slate-700 hover:to-slate-800 hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out transform ${
-                isVisible2 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-              }`}
-              style={{ transitionDelay: "1000ms" }}
-              onClick={()=>{navigate("/jewelry-manufacturing-process")}}
-            >
-              Explore Manufacturing
-            </button>
-          </div>
-        </div>
       </div>
     </>
   )
