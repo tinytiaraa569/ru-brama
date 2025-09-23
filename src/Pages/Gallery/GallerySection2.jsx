@@ -14,24 +14,29 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import earring1 from './GalleryImages/earring1.webp'
+import bracelets1 from './GalleryImages/bracelets1.webp'
+import sets1 from './GalleryImages/sets1.webp'
+
+
 
 const galleryImages = [
   {
-    src: "https://images.pexels.com/photos/33154633/pexels-photo-33154633.jpeg",
+    src: bracelets1,
     alt: "Diamond engagement ring on display",
     title: "Engagement Ring",
-    category: "Rings",
+    category: "Earring",
     relatedImage: [],
   },
   {
-    src: "https://images.pexels.com/photos/32039109/pexels-photo-32039109.jpeg",
+    src: sets1,
     alt: "Luxury gold necklace with pendant",
     title: "Gold Necklace",
     category: "Necklaces",
     relatedImage: [],
   },
   {
-    src: "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg",
+    src: earring1,
     alt: "Pair of elegant diamond earrings",
     title: "Diamond Earrings",
     category: "Earrings",
