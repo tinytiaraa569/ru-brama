@@ -94,7 +94,7 @@ const Footer = () => {
               </div>
             </motion.div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              From design to final polish, each stage of creation is perfected with precision, passion, and artistry.
+              White label your precious jewelry brand and expand with timeless elegance, exclusivity, and global recognition.
             </p>
           </motion.div>
 
@@ -123,15 +123,16 @@ const Footer = () => {
               >
                 <MapPin className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
+                   WICEL Admin Bldg.
+                     <br />
                     Plot F-11 & 12-1, Second Floor,
-                     <br />
-                     Admin Bldg.,  MIDC (Marol),
-                     <br />
-
-                    Opp. Seepz Main Gate,
+                    <br />
+                       MIDC (Marol), Opp. Seepz
+                     Main Gate,
                      <br />
 
-                    WICEL, Andheri(East), Mumbai-400093.
+
+                    Andheri(East), Mumbai-400093.
                  
                 </p>
               </motion.div>

@@ -167,10 +167,10 @@
 
 .left {
     left: -50px;  
-    top: 41%;
+    top: 39%;
     transform: translateY(-50%);
-    width: 120px;  
-    height: 120px;  
+    width: 140px;  
+    height: 140px;  
     overflow: hidden;
     /* padding: 53px 45px; */
     display: flex;

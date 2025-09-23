@@ -436,18 +436,16 @@ const dotVariants = {
                           {/* Heading */}
                           <motion.div variants={itemVariants}>
                             <h1 className="text-4xl font-extrabold text-slate-800 leading-tight uppercase">
-                              Over 1 <span className="text-slate-600">Lakh+ </span> Designs
+                              Design To <span className="text-slate-600">Jewelry</span> 
                             </h1>
                             <h1 className="text-4xl font-extrabold text-slate-900 leading-tight uppercase">
-                              Completed
+                              Perfection
                             </h1>
                           </motion.div>
 
                           {/* Paragraph */}
                           <motion.p variants={paragraphVariants} className="text-lg text-slate-600 leading-relaxed text-justify">
-                            At Ru-Brama, every piece is a testament to timeless craftsmanship. Our artisans blend traditional techniques
-                            with modern finesse, handcrafting each jewel with unmatched detail, passion, and precision. Because true beauty
-                            lies in the hands that create it.
+                            We at Ru-Brama specialize in working with natural diamonds, CVD-lab grown, natural colored stones, gold, platinum & silver.  All you need to do - share reference images, diamonds lot details & We deliver it all – from sketch to finished jewellery. Let us spark a little and make your brand shine brighter.
                           </motion.p>
 
                           {/* Button */}
@@ -478,14 +476,14 @@ const dotVariants = {
                                   }`}
                                 >
                                   <div className="flex justify-center items-center animate-pulse">
-                                    <div className="w-20 h-20 bg-slate-900 flex justify-center items-center flex-col text-white">
+                                    <div className="w-30 h-20 bg-slate-900 flex justify-center items-center flex-col text-white">
                                       <img
                                         src="/favicon-light.png"
                                         alt="Logo"
                                         className="w-10 h-10 object-contain hover:rotate-360 transition-transform duration-500"
                                       />
-                                      <p className="text-xs text-center text-slate-200">
-                                        Ru-Brama <br /> Pvt Ltd
+                                      <p className="text-sm text-center text-slate-200 my-1">
+                                        Passionate About 
                                       </p>
                                     </div>
                                   </div>
@@ -507,8 +505,8 @@ const dotVariants = {
                                     >
                                       <div className="w-full h-full adjustsndm">
                                         <p className="!text-lg !text-slate-800 font-semibold">Diamond </p>
-                                        <p className="!text-xs !text-slate-500">Natural Diamond /</p>
-                                        <p className="!text-xs !text-slate-500">LabGrown Diamond</p>
+                                        <p className="!text-xs !text-slate-500">Natural Diamond </p>
+                                        {/* <p className="!text-xs !text-slate-500">LabGrown Diamond</p> */}
                                       </div>
                                     </div>
 
@@ -543,9 +541,9 @@ const dotVariants = {
                                       onMouseLeave={() => setHoveredCircle(null)}
                                     >
                                       <div className="smabottom">
-                                        <p className="!text-md text-center !text-slate-800 font-semibold">ColorStones</p>
-                                         <p className="!text-xs !text-slate-500 text-center">Precious /</p>
-                                        <p className="!text-xs !text-slate-500">Semi-Precious</p>
+                                        <p className="!text-md text-center !text-slate-800 font-semibold">CVD</p>
+                                         <p className="!text-xs !text-slate-500 text-center">LabGrown Diamond </p>
+                                        
                                       </div>
                                     </div>
                                       </TooltipTrigger>
@@ -584,11 +582,12 @@ const dotVariants = {
                                       <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
                                         <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Gold
                                       </p>
-                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
-                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Silver
-                                      </p>
+                                      
                                       <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
                                         <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Platinum
+                                      </p>
+                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
+                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Silver
                                       </p>
                                     </div>
                                     </div>
@@ -624,8 +623,8 @@ const dotVariants = {
                                       onMouseLeave={() => setHoveredCircle(null)}
                                     >
                                       <div className="smaright">
-                                        <p className="!text-slate-800 font-semibold text-center !text-md">Enamel</p>
-                                        <p className="!text-xs !text-slate-500 text-center">All Colors</p>
+                                        <p className="!text-slate-800 font-semibold text-center !text-md">Natural</p>
+                                        <p className="!text-xs !text-slate-500 text-center">ColorStones</p>
                                       </div>
                                     </div>
                                         </TooltipTrigger>
@@ -713,10 +712,10 @@ const dotVariants = {
               }`}
             >
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-800 leading-tight uppercase">
-               Over 1 Lakh+ Design's
+               Design To Jewelry
              </h1>
              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold text-black leading-tight uppercase">
-               Completed
+               Perfection
              </h1>
             </div>
 
@@ -725,9 +724,7 @@ const dotVariants = {
                 isVisible2 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
               }`}
             >
-              At Ru-Brama , every piece is a testament to timeless craftsmanship. Our artisans blend traditional
-              techniques with modern finesse, handcrafting each jewel with unmatched detail, passion, and precision.
-              Because true beauty lies in the hands that create it.
+             We at Ru-Brama specialize in working with natural diamonds, CVD-lab grown, natural colored stones, gold, platinum & silver.  All you need to do - share reference images, diamonds lot details & We deliver it all – from sketch to finished jewellery. Let us spark a little and make your brand shine brighter.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8 mb-8">
@@ -736,8 +733,8 @@ const dotVariants = {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-200 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">{materialData.diamond.title}</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">{materialData.diamond.subtitle}</p>
+                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Diamond </h3>
+                        <p className="text-xs sm:text-sm text-slate-500 text-center">Natural Diamond</p>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-3">
@@ -748,8 +745,8 @@ const dotVariants = {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-400 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">{materialData.colorstone.title}</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">{materialData.colorstone.subtitle}</p>
+                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">CVD</h3>
+                        <p className="text-xs sm:text-sm text-slate-500 text-center">LabGrown Diamond</p>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-3">
@@ -760,8 +757,21 @@ const dotVariants = {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-600 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">{materialData.metals.title}</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">{materialData.metals.subtitle}</p>
+                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Metals</h3>
+                          <div className="flex gap-1.5">
+                        <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
+
+                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Gold
+                                      </p>
+                                      
+                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
+                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Platinum
+                                      </p>
+                                      <p className="!text-xs !text-slate-500 flex items-center gap-0.5">
+                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span> Silver
+                                      </p>
+                          </div>
+
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-3">
@@ -772,8 +782,8 @@ const dotVariants = {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div className="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center border border-slate-200 transform transition-all duration-600 delay-800 hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">{materialData.enamel.title}</h3>
-                        <p className="text-xs sm:text-sm text-slate-500 text-center">{materialData.enamel.subtitle}</p>
+                        <h3 className="text-md sm:text-xl font-bold text-slate-800 mb-2">Natural</h3>
+                        <p className="text-xs sm:text-sm text-slate-500 text-center">ColorStones</p>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="max-w-xs p-3">

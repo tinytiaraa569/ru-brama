@@ -251,6 +251,11 @@ const benefits = [
     description: "You concentrate on building your brand, marketing, and sales while we manage the rest.",
   },
   {
+    icon: Rocket,
+    title: "Relax",
+    description: "Free yourself from manufacturing worries & heavy investment in infrastructure.",
+  },
+  {
     icon: Zap,
     title: "Idea to Launch",
     description: "Enabling faster launches & product development with streamlined processes.",
@@ -280,11 +285,7 @@ const benefits = [
     title: "On Time Delivery",
     description: "Promising timely production & delivery with guaranteed quality standards.",
   },
-  {
-    icon: Rocket,
-    title: "Relax",
-    description: "Free yourself from manufacturing worries & heavy investment in infrastructure.",
-  },
+  
 ]
 
 function HomeBenefits() {
